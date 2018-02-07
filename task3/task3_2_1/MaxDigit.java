@@ -5,7 +5,7 @@ public class MaxDigit {
 
     public static int getMaxDigit(int number) {
 
-        number = Math.abs(number); //to make working with negative numbers
+       CheckNumber.checkNaturalNumber(number);
 
         int max = number % 10;
 
@@ -19,5 +19,7 @@ public class MaxDigit {
 
         return max;
     }
+
+
 
 }

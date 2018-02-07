@@ -1,10 +1,12 @@
 package task3.task3_2_3;
 
+import task3.task3_2_1.CheckNumber;
+
 public class PrimeNumber {
 
     public static boolean isPrimeNumber(int number) {
 
-        number = Math.abs(number); //to make working with negative numbers
+       CheckNumber.checkNaturalNumber(number);
 
         boolean isPrime = true;
 

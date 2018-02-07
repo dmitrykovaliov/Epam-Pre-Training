@@ -1,10 +1,13 @@
 package task3.task3_2_2;
 
+
+import task3.task3_2_1.CheckNumber;
+
 public class Palindrome {
 
     public static boolean isPalindrome(int number) {
 
-        number = Math.abs(number); //to make working with negative numbers
+        CheckNumber.checkNaturalNumber(number);
 
         return number == reverseNumber(number); // true - isPalindrome
     }

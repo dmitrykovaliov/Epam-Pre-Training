@@ -4,7 +4,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        int a = 160;
+        int a = -160;
         int b = 120;
 
        View.print("GCD: " + CommonCalculator.getGreatestCommonDiviser(a, b));

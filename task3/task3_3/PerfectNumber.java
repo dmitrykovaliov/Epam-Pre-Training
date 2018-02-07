@@ -1,9 +1,12 @@
 package task3.task3_3;
 
+import task3.task3_2_1.CheckNumber;
+
 public class PerfectNumber {
 
     public static boolean isPerfectNumber(int number) {
 
+        CheckNumber.checkNaturalNumber(number);
 
         int i = 2;
         int sum = 1;
