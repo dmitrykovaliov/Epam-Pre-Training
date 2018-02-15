@@ -5,11 +5,11 @@ import task3.task3_2_1.CheckNumber;
 
 public class Palindrome {
 
-    public static boolean isPalindrome(int number) {
+    public static boolean checkPalindrome(int number) {
 
         CheckNumber.checkNaturalNumber(number);
 
-        return number == reverseNumber(number); // true - isPalindrome
+        return number == reverseNumber(number); // true - checkPalindrome
     }
 
     public static int reverseNumber(int number) {

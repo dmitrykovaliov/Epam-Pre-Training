@@ -8,10 +8,9 @@ public class Test {
         int n1 = 951654;
         int n2 = 651548;
 
-        View.print(n, MaxDigit.getMaxDigit(n));
-        View.print(n1, MaxDigit.getMaxDigit(n1));
-        View.print(n2, MaxDigit.getMaxDigit(n2));
-
+        View.print("Max digit: " + MaxDigit.getMaxDigit(n));
+        View.print("Max digit: " + MaxDigit.getMaxDigit(n1));
+        View.print("Max digit: " + MaxDigit.getMaxDigit(n2));
 
     }
 }

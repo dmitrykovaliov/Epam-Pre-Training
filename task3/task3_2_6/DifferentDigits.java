@@ -4,11 +4,12 @@ import task3.task3_2_1.CheckNumber;
 
 public class DifferentDigits {
 
-    public static int getDifferentDigits(int num) {
+    public static int findDifferentDigits(int num) {
 
         CheckNumber.checkNaturalNumber(num);
 
         int number = num;
+
         int count = 0;
         int diffDigits = 0;
 

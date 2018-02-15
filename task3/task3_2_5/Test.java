@@ -7,8 +7,8 @@ public class Test {
         int a = -160;
         int b = 120;
 
-       View.print("GCD: " + CommonCalculator.getGreatestCommonDiviser(a, b));
-       View.print("LCM: " + CommonCalculator.getLeastCommonMultiple(a, b));
+       View.print("GCD: " + CommonCalculator.calcGreatestCommonDiviser(a, b));
+       View.print("LCM: " + CommonCalculator.calcLeastCommonMultiple(a, b));
 
     }
 }

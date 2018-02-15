@@ -10,11 +10,11 @@ public class Test {
         int n3 = 3;
         int n4 = 2;
 
-        View.print(n, PrimeNumber.isPrimeNumber(n) ? "prime" : "not prime");
-        View.print(n1, PrimeNumber.isPrimeNumber(n1) ? "prime" : "not prime");
-        View.print(n2, PrimeNumber.isPrimeNumber(n2) ? "prime" : "not prime");
-        View.print(n3, PrimeNumber.isPrimeNumber(n3) ? "prime" : "not prime");
-        View.print(n4, PrimeNumber.isPrimeNumber(n4) ? "prime" : "not prime");
+        View.print(PrimeNumber.checkPrimeNumber(n) ? "prime" : "not prime");
+        View.print(PrimeNumber.checkPrimeNumber(n1) ? "prime" : "not prime");
+        View.print(PrimeNumber.checkPrimeNumber(n2) ? "prime" : "not prime");
+        View.print(PrimeNumber.checkPrimeNumber(n3) ? "prime" : "not prime");
+        View.print(PrimeNumber.checkPrimeNumber(n4) ? "prime" : "not prime");
 
     }
 }

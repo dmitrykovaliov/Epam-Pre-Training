@@ -5,7 +5,7 @@ import task3.task3_2_1.CheckNumber;
 
 public class CommonCalculator {
 
-    public static int getGreatestCommonDiviser(int a, int b) {
+    public static int calcGreatestCommonDiviser(int a, int b) {
 
         CheckNumber.checkNaturalNumber(a);
         CheckNumber.checkNaturalNumber(b);
@@ -22,7 +22,7 @@ public class CommonCalculator {
        return a;
     }
 
-    public static int getLeastCommonMultiple(int a, int b) {
+    public static int calcLeastCommonMultiple(int a, int b) {
 
         CheckNumber.checkNaturalNumber(a);
         CheckNumber.checkNaturalNumber(b);

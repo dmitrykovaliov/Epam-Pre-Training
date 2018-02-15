@@ -4,9 +4,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        View.print(HeadsTails.getHeadsTails(100_000));
-
-        System.out.println();
+        View.print(HeadsTails.calcHeadsTails(100_000));
 
     }
 }

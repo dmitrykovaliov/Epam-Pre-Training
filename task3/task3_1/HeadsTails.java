@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class HeadsTails {
 
-    public static String getHeadsTails(int sumSpin) {
+    public static String calcHeadsTails(int sumSpin) {
 
         sumSpin = Math.abs(sumSpin);   // check and convert to positive number
 
@@ -24,7 +24,6 @@ public class HeadsTails {
         }
 
         return String.format("Heads: %d, Tails: %d", sumHeads, sumTails);
-
 
     }
 }

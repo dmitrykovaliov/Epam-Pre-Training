@@ -2,9 +2,9 @@ package task3.task3_2_1;
 
 public class View {
 
-    public static void print(int a, int b) {
+    public static void print(String str) {
 
-        System.out.printf("Max digit of %d is %d\n", a, b);
+        System.out.println(str);
 
     }
 }
