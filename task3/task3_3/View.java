@@ -2,9 +2,9 @@ package task3.task3_3;
 
 public class View {
 
-    public static void print(int number, String str) {
+    public static void print(String str) {
 
-        System.out.printf("Number %d is %s\n", number, str);
+        System.out.println(str);
 
     }
 }
