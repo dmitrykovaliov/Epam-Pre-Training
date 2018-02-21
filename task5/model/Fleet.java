@@ -1,13 +1,14 @@
 package task5.model;
 
 import task5.util.ArList;
+import task5.util.Container;
 
 public abstract class Fleet {
 
-    protected String name;
-    private ArList<Vessel> container;
+    private String name;
+    private Container<Vessel> container;
     private VesselCreator vesselCreator;
-    private double totalCapacity;
+
 
     public VesselCreator getVesselCreator() {
         return vesselCreator;
@@ -25,7 +26,7 @@ public abstract class Fleet {
         this.name = name;
     }
 
-    public ArList<Vessel> getContainer() {
+    public Container<Vessel> getContainer() {
         return container;
     }
 
@@ -38,18 +39,7 @@ public abstract class Fleet {
         this.vesselCreator = vesselCreator;
     }
 
-    public Vessel includeVessel(String type, String name, String flag, double capacity) {
-        Vessel vessel = vesselCreator.createVessel(type, name, flag, capacity);
-        return vessel;
+    public Vessel includeVessel(VesselTypes type, String name, String flag, double capacity) {
+        return vesselCreator.createVessel(type, name, flag, capacity);
     }
-
-    public double calculateTotalCapacity() {
-        for (int i = 0; i < container.size(); i++) {
-            Vessel vessel = (Vessel)container.get(i);
-            totalCapacity += vessel.capacity;
-        }
-        return totalCapacity;
-    }
-
-
 }

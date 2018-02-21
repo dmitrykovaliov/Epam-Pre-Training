@@ -2,12 +2,12 @@ package task5.model;
 
 public class VesselCreator {
 
-    public Vessel createVessel(String type, String name, String flag, double capacity) {
+    public Vessel createVessel(VesselTypes type, String name, String flag, double capacity) {
         Vessel vessel = null;
 
-        if (type.equals("bulker")) {
+        if (type.equals(VesselTypes.BULKER)) {
             vessel = new Bulker(name, flag, capacity);
-        } else if (type.equals("tanker")) {
+        } else if (type.equals(VesselTypes.TANKER)) {
             vessel = new Tanker(name, flag, capacity);
         }
 

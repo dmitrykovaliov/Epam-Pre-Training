@@ -5,7 +5,7 @@ import java.util.Objects;
 public abstract class Vessel {
     private String name;
     private String flag;
-    double capacity;
+    private double capacity;
 
     public Vessel() {
     }

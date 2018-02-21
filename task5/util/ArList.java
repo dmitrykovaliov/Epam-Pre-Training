@@ -3,9 +3,9 @@ package task5.util;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class ArList<T> {
+public class ArList<T> implements Container<T> {
 
-    public static int STEP = 10;
+    private static int STEP = 10;
 
     private T[] array;
     private int cursor = 0; //the position to add item
@@ -59,6 +59,8 @@ public class ArList<T> {
         return result;
     }
 
+
+    @Override
     public void add(T o) {
 
         array[cursor] = o;
@@ -70,6 +72,7 @@ public class ArList<T> {
         }
     }
 
+    @Override
     public void remove(int j) {
 
         if (j >= 0 && j < cursor) {
@@ -91,7 +94,7 @@ public class ArList<T> {
         }
     }
 
-    public Object get(int i) {
+    public T get(int i) {
         if (i >= 0 && i < cursor) {
             return array[i];
         }  else {
