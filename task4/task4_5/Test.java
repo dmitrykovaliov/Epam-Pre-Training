@@ -5,9 +5,13 @@ public class Test {
 
     public static void main(String[] args) {
 
-        int a = 3;
+        int a = 4;
 
-       View.print(HanoiTower.makeTower(a, 'A', 'B', 'C'));
+        try {
+            View.print(HanoiTower.makeTower(a, 'A', 'B', 'C'));
+        } catch (NotNaturalNumber e) {
+            e.printStackTrace();
+        }
 
     }
 }
