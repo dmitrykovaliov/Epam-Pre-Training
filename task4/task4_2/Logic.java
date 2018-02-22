@@ -1,39 +1,55 @@
 package task4.task4_2;
 
-import task3.task3_2_1.MaxDigit;
+import com.sun.istack.internal.NotNull;
 
 public class Logic {
 
-    public static double computePOW(double num, int n) {
-
-        double result = 0;
-
+    public static double computePOW(double num, int power) throws NullNumberException {
         if (num != 0) {
+            double result = 1;
+            int n = Math.abs(power);
 
-            int sign = num > 0 ? 1 : -1;
-            double absNumber = sign * num;
-
-            if (n > 0) {
-                result = sign * revertPOW(absNumber, n);
-            } else if (n < 0) {
-                result = sign * revertPOW(1 / absNumber, -n);
-            } else {
-                result = sign;
+            for (int i = 0; i < n; i++) {
+                result *= num;
             }
 
+            if (power < 0) {
+                result = 1 / result;
+            }
+
+            if (num < 0 && power % 2 == 0) {
+                result = -result;  //supporting sign of number
+            }
+
+            return result;
         } else {
-            try {
-                throw new Exception("Please enter real number except zero");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
+            throw new NullNumberException("Please enter real number except zero");
         }
 
-        return result;
     }
 
-    public static double revertPOW(double num, int n) {
+    public static double computeRecursivePOW(double num, int power) throws NullNumberException {
+        if (num != 0) {
+
+            if (power == 0) {
+                return Math.abs(num) / num;
+            }
+
+            int n = Math.abs(power);
+
+            if (power < 0) {
+                return 1 / revertPOW(num, n);
+            }
+
+            return revertPOW(num, n);
+
+        } else {
+            throw new NullNumberException("Please enter real number except zero");
+        }
+    }
+
+    private static double revertPOW(double num, int n) {
         return n > 0 ? num * revertPOW(num, n - 1) : 1;
     }
+
 }

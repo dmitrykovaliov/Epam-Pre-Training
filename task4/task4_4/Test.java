@@ -33,5 +33,18 @@ public class Test {
         View.print(String.format("Number: %d, result: %d", a7, Logic.computeFibonacci(a7)));
         View.print(String.format("Number: %d, result: %d \n", a8, Logic.computeFibonacci(a8)));
 
+        View.print(String.format("Number: %d, result: %d", b, Logic.computeRecursiveFibonacci(b)));
+        View.print(String.format("Number: %d, result: %d", b1, Logic.computeRecursiveFibonacci(b1)));
+        View.print(String.format("Number: %d, result: %d", b2, Logic.computeRecursiveFibonacci(b2)));
+        View.print(String.format("Number: %d, result: %d", a, Logic.computeRecursiveFibonacci(a)));
+        View.print(String.format("Number: %d, result: %d", a1, Logic.computeRecursiveFibonacci(a1)));
+        View.print(String.format("Number: %d, result: %d", a2, Logic.computeRecursiveFibonacci(a2)));
+        View.print(String.format("Number: %d, result: %d", a3, Logic.computeRecursiveFibonacci(a3)));
+        View.print(String.format("Number: %d, result: %d", a4, Logic.computeRecursiveFibonacci(a4)));
+        View.print(String.format("Number: %d, result: %d", a5, Logic.computeRecursiveFibonacci(a5)));
+        View.print(String.format("Number: %d, result: %d", a6, Logic.computeRecursiveFibonacci(a6)));
+        View.print(String.format("Number: %d, result: %d", a7, Logic.computeRecursiveFibonacci(a7)));
+        View.print(String.format("Number: %d, result: %d \n", a8, Logic.computeRecursiveFibonacci(a8)));
+
     }
 }

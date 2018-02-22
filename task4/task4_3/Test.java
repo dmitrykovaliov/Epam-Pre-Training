@@ -14,9 +14,18 @@ public class Test {
         int a2 = 20000;
         int b2 = 2;
 
-        View.print("Equal: " + Logic.equalDigitsSum(a,b));
-        View.print("Equal: " + Logic.equalDigitsSum(a1,b1));
-        View.print("Equal: " + Logic.equalDigitsSum(a2,b2));
+        try {
+            View.print("Equal: " + Logic.equalDigitsSum(a, b));
+            View.print("Equal: " + Logic.equalDigitsSum(a1, b1));
+            View.print("Equal: " + Logic.equalDigitsSum(a2, b2) + "\n");
+
+            View.print("Equal: " + Logic.equalRecursiveDigitsSum(a, b));
+            View.print("Equal: " + Logic.equalRecursiveDigitsSum(a1, b1));
+            View.print("Equal: " + Logic.equalRecursiveDigitsSum(a2, b2));
+
+        } catch (NotNaturalNumber e) {
+            e.printStackTrace();
+        }
 
     }
 }

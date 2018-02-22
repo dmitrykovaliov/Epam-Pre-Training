@@ -2,20 +2,49 @@ package task4.task4_4;
 
 public class Logic {
 
-public static long result = 0;
-
     public static long computeFibonacci(int num) {
 
         if(num > 2) {
-            result = computeFibonacci(num - 1) + computeFibonacci(num -2);
-        } else if(num == 2) {
-            result = 1;
-        } else if(num == 1) {
-            result = 0;
-        } else {
-            result = -1;
+            int thirst = 0;
+            int second = 1;
+            int third = 1;
+
+            for (int i = 3; i <= num; i++) {
+
+                third = thirst + second;
+                thirst = second;
+                second = third;
+            }
+
+            return third;
         }
 
-        return result;
+        if(num == 2) {
+            return  1;
+        }
+
+        if(num == 1) {
+            return 0;
+        }
+
+        return -1;
+
+    }
+
+    public static long computeRecursiveFibonacci(int num) {
+
+        if(num > 2) {
+            return computeRecursiveFibonacci(num - 1) + computeRecursiveFibonacci(num -2);
+        }
+
+        if(num == 2) {
+            return  1;
+        }
+
+        if(num == 1) {
+            return 0;
+        }
+
+        return -1;
     }
 }
