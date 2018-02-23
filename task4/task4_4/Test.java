@@ -1,7 +1,7 @@
 package task4.task4_4;
 
 
-import task4.task4_5.View;
+import task6.View;
 
 public class Test {
 

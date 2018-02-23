@@ -1,6 +1,6 @@
 package task5.util;
 
-public class Container<T> implements UniList<T> {
+public class Container<T> extends UniList<T> {
 
     private UniList<T> uniList;
 

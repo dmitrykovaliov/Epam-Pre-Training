@@ -1,6 +1,8 @@
 package task4.task4_5;
 
 
+import task6.View;
+
 public class Test {
 
     public static void main(String[] args) {

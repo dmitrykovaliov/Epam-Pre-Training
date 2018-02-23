@@ -1,13 +1,13 @@
 package task5.util;
 
-interface UniList<T> {
+public abstract class UniList<T> {
 
-    void add(T o);
+    public abstract void add(T o);
 
-    void remove(int i);
+    public abstract void remove(int i);
 
-    T get(int i);
+    public abstract T get(int i);
 
-    int size();
+    public abstract int size();
 
 }
