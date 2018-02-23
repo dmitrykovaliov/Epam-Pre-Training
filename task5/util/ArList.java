@@ -3,7 +3,7 @@ package task5.util;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class ArList<T> implements Container<T> {
+public class ArList<T> implements UniList<T> {
 
     private static int STEP = 10;
 

@@ -1,7 +1,7 @@
 package task5.model;
 
-import task5.util.ArList;
 import task5.util.Container;
+
 
 public abstract class Fleet {
 
@@ -35,7 +35,7 @@ public abstract class Fleet {
 
     public Fleet(String name, VesselCreator vesselCreator) {
         this.name = name;
-        this.container = new ArList<>();
+        this.container = new Container<>();
         this.vesselCreator = vesselCreator;
     }
 

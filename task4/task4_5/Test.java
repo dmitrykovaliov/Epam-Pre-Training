@@ -5,7 +5,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        int a = 4;
+        int a = 2;
 
         try {
             View.print(HanoiTower.makeTower(a, 'A', 'B', 'C'));
