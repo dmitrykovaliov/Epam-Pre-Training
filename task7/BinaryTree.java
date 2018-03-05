@@ -1,6 +1,10 @@
 package task7;
 
-public class BinaryTree <T extends Comparable> {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class BinaryTree <T extends Comparable> implements UniTree<T> {
     Node<T> root;
     private int count = 0;
 
@@ -8,8 +12,23 @@ public class BinaryTree <T extends Comparable> {
         this.root = null;
     }
 
+    public class Node<T extends Comparable> {
+        T data;
+        Node leftNode;
+        Node rightNode;
+
+        public Node(T data) {
+            this.data = data;
+            this.leftNode = null;
+            this.rightNode = null;
+        }
+
+    }
+
     //contains item
-    public boolean contains(T item) {
+    public boolean contains(T item) throws EmptyTreeException {
+
+        if(count == 0 ) throw new EmptyTreeException("The tree is empty");
 
         return contains(root, item);
     }
@@ -42,13 +61,12 @@ public class BinaryTree <T extends Comparable> {
             node = new Node(item);
             count++;
         } else {
-            if(item.compareTo(node.data) == 0) {
-                return node;
-            }
-            if (item.compareTo(node.data) < 0)
+            if (item.compareTo(node.data) < 0) {
                 node.leftNode = addNode(node.leftNode, item);
-            else
+            }
+            else{
                 node.rightNode = addNode(node.rightNode, item);
+            }
         }
 
         return node;
@@ -117,15 +135,92 @@ public class BinaryTree <T extends Comparable> {
         }
     }
 
-    //return size of tree
-    public int size() {
-        return count;
-    }
-
     //additional to deleteNode method
     private T findMin(Node node) {
         return node.leftNode == null ? (T)node.data :
                 findMin(node.leftNode);
     }
 
+
+
+
+
+    //return size of tree
+    public int size() {
+        return count;
+    }
+
+    @Override
+    public List preOrderTree() throws EmptyTreeException {
+        if(count == 0) {
+            throw new EmptyTreeException("The tree is empty");
+        }
+       return preOrderTree(root, new ArrayList());
+    }
+
+    @Override
+    public List postOrderTree() throws EmptyTreeException {
+        if(count == 0) {
+            throw new EmptyTreeException("The tree is empty");
+        }
+        return postOrderTree(root, new ArrayList());
+    }
+
+    @Override
+    public List inOrderTree() throws EmptyTreeException {
+        if(count == 0) {
+            throw new EmptyTreeException("The tree is empty");
+        }
+        return inOrderTree(root, new ArrayList());
+    }
+
+    private List preOrderTree(Node top, List list) {
+        if (top != null) {
+            list.add(top.data);
+            preOrderTree(top.leftNode, list);
+            preOrderTree(top.rightNode, list);
+        }
+        return list;
+    }
+
+    private List postOrderTree(Node top, List list) {
+        if (top != null) {
+            postOrderTree(top.leftNode, list);
+            postOrderTree(top.rightNode, list);
+            list.add(top.data);
+        }
+        return list;
+    }
+
+    private List inOrderTree(Node top, List list) {
+        if (top != null) {
+            inOrderTree(top.leftNode, list);
+            list.add(top.data);
+            inOrderTree(top.rightNode, list);
+        }
+        return list;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof BinaryTree)) return false;
+        BinaryTree<?> that = (BinaryTree<?>) o;
+        return count == that.count &&
+                Objects.equals(root, that.root);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(root, count);
+    }
+
+    @Override
+    public String toString() {
+        return "BinaryTree{" +
+                "root=" + root +
+                ", count=" + count +
+                '}';
+    }
 }

@@ -1,13 +1,13 @@
 package task4.task4_4;
 
 
-import task6.View;
+import task6.view.View;
 
 public class Test {
 
     public static void main(String[] args) {
 
-        int b = -5;
+        int b = 6;
         int b1 = 0;
         int b2 = 1; //first 0
         int a = 2;  //second 1

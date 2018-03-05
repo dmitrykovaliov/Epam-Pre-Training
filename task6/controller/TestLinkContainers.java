@@ -1,15 +1,16 @@
-package task6;
+package task6.controller;
 
-import task6.util.MyLinkedQueue;
-import task6.util.MyLinkedStack;
+import task6.exception.EmptySetException;
+import task6.util.linked.LinkListQueue;
+import task6.util.linked.LinkListStack;
+import task6.view.View;
 
-import java.util.LinkedList;
-
-public class TestLinkedContainers {
+public class TestLinkContainers {
     public static void main(String[] args) {
 
-        MyLinkedStack<Integer> myLinkedStack = new MyLinkedStack<>();
-        MyLinkedQueue<Integer> myLinkedQueue = new MyLinkedQueue<>();
+        try {
+            LinkListStack<Integer> myLinkedStack = new LinkListStack<>();
+            LinkListQueue<Integer> myLinkedQueue = new LinkListQueue<>();
 
             myLinkedStack.push(5);
             myLinkedStack.push(4);
@@ -19,7 +20,7 @@ public class TestLinkedContainers {
             View.print(myLinkedStack.isEmpty());
             myLinkedStack.push(1);
 
-            View.print(myLinkedStack.peek());
+            View.print(myLinkedStack.peak());
 
             View.print(myLinkedStack.pop());
             View.print(myLinkedStack.pop());
@@ -39,15 +40,18 @@ public class TestLinkedContainers {
             View.print(myLinkedQueue.isEmpty());
             myLinkedQueue.enqueue(1);
 
-            View.print(myLinkedQueue.peek());
+            View.print(myLinkedQueue.peak());
 
-            View.print(myLinkedQueue.dequeue());
+           View.print(myLinkedQueue.dequeue());
             View.print(myLinkedQueue.dequeue());
             View.print(myLinkedQueue.dequeue());
             View.print(myLinkedQueue.dequeue());
             View.print(myLinkedQueue.dequeue());
 
             View.print(myLinkedQueue.isEmpty());
+        } catch (EmptySetException e) {
+            e.printStackTrace();
+        }
 
     }
 }

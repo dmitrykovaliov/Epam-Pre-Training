@@ -1,14 +1,24 @@
 package task5.model;
 
 import task5.util.Container;
+import task6.util.array.UniList;
 
 
-public abstract class Fleet {
+public class Fleet {
 
     private String name;
-    private Container<Vessel> container;
+    private UniList<Vessel> container;
     private VesselCreator vesselCreator;
 
+    public Fleet() {
+        this.container = new Container<>();
+    }
+
+    public Fleet(String name, VesselCreator vesselCreator) {
+        this.name = name;
+        this.container = new Container<>();
+        this.vesselCreator = vesselCreator;
+    }
 
     public VesselCreator getVesselCreator() {
         return vesselCreator;
@@ -26,18 +36,11 @@ public abstract class Fleet {
         this.name = name;
     }
 
-    public Container<Vessel> getContainer() {
+    public UniList<Vessel> getContainer() {
         return container;
     }
 
-    public Fleet() {
-    }
 
-    public Fleet(String name, VesselCreator vesselCreator) {
-        this.name = name;
-        this.container = new Container<>();
-        this.vesselCreator = vesselCreator;
-    }
 
     public Vessel includeVessel(VesselTypes type, String name, String flag, double capacity) {
         return vesselCreator.createVessel(type, name, flag, capacity);

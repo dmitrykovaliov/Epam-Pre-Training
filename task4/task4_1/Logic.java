@@ -18,7 +18,12 @@ public class Logic {
     public static long computeRecursiveDigitsSum(int num) {
 
         int number = Math.abs(num); //to make working with negative numbers
+        return computeRecDigitsSum(number);
 
-        return number > 0 ? number % 10 + computeRecursiveDigitsSum(number / 10) : 0;
     }
+
+    public static long computeRecDigitsSum(int num) {
+        return num > 0 ? num % 10 + computeRecursiveDigitsSum(num / 10) : 0;
+    }
+
 }

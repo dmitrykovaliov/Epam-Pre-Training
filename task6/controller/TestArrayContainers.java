@@ -1,21 +1,18 @@
-package task6;
+package task6.controller;
 
-import task6.util.MyQueue;
-import task6.util.MyStack;
+import task6.exception.IllegalSizeException;
+import task6.exception.OutIndexException;
+import task6.util.array.ArListQueue;
+import task6.util.array.ArListStack;
+import task6.view.View;
 
-import java.util.LinkedList;
 
-public class TestPalindrome {
+public class TestArrayContainers {
     public static void main(String[] args) {
 
-        View.print(Palindrome.checkPalindrome(0));
-        View.print(Palindrome.checkPalindrome(202));
-        View.print(Palindrome.checkPalindrome(5225));
-        View.print(Palindrome.checkPalindrome(16546));
-
-
-       /* MyStack<Integer> myStack = new MyStack<>(5);
-        MyQueue<Integer> myQueue = new MyQueue<>(5);
+        try {
+            ArListStack<Integer> myStack = new ArListStack<>(5);
+            ArListQueue<Integer> myQueue = new ArListQueue<>(5);
 
             myStack.push(5);
             myStack.push(4);
@@ -55,26 +52,11 @@ public class TestPalindrome {
 
             View.print(myQueue.isEmpty());
 
-
-        LinkedList<Integer> linkedList = new LinkedList<>();
-
-        linkedList.push(5);
-        linkedList.push(4);
-        linkedList.push(3);
-        linkedList.push(2);
-        linkedList.push(1);
-
-        View.print(linkedList.isEmpty());
-        linkedList.push(1);
-
-        View.print(linkedList.pop());
-        View.print(linkedList.pop());
-        View.print(linkedList.pop());
-        View.print(linkedList.pop());
-        View.print(linkedList.pop());
-        View.print(linkedList.pop());
-
-        View.print(linkedList.isEmpty());*/
+        } catch (IllegalSizeException e) {
+            e.printStackTrace();
+        } catch (OutIndexException e) {
+            e.printStackTrace();
+        }
 
 
     }

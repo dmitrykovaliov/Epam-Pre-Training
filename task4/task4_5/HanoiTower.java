@@ -19,7 +19,8 @@ public class HanoiTower {
         if (discNumber > 0) {
             return revertTower(discNumber - 1, A, C, B) +
                     A + "-->" + B + "\n" +
-                    revertTower(discNumber - 1, C, B, A);
+                    revertTower(discNumber - 1, C, B, A)
+            ;
         } else {
             return "";
         }

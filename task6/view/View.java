@@ -1,4 +1,4 @@
-package task6;
+package task6.view;
 
 public class View {
 

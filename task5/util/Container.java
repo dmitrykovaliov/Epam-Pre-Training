@@ -1,6 +1,11 @@
 package task5.util;
 
-public class Container<T> extends UniList<T> {
+import task6.exception.EmptySetException;
+import task6.exception.OutIndexException;
+import task6.util.array.ArList;
+import task6.util.array.UniList;
+
+public class Container<T> implements UniList<T> {
 
     private UniList<T> uniList;
 
@@ -9,17 +14,17 @@ public class Container<T> extends UniList<T> {
     }
 
     @Override
-    public void add(T o) {
+    public void add(T o) throws OutIndexException {
         uniList.add(o);
     }
 
     @Override
-    public void remove(int i) {
+    public void remove(int i) throws EmptySetException, OutIndexException {
         uniList.remove(i);
     }
 
     @Override
-    public T get(int i) {
+    public T get(int i) throws EmptySetException, OutIndexException {
         return uniList.get(i);
     }
 
