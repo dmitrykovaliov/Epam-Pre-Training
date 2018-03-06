@@ -2,9 +2,11 @@ package task5.model;
 
 import java.util.Objects;
 
-public abstract class Vessel {
+public abstract class Vessel implements Comparable<Vessel> {
     private String name;
     private String flag;
+
+
     private double capacity;
 
     public Vessel() {
@@ -67,6 +69,20 @@ public abstract class Vessel {
 
     public abstract String load();
     public abstract String discharge();
+
+
+    @Override
+    public int compareTo(Vessel o) {
+
+        if(capacity > o.getCapacity()) {
+            return 1;
+        }
+        if(capacity < o.getCapacity()) {
+            return -1;
+        }
+
+        return 0;
+    }
 }
 
 

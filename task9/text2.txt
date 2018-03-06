@@ -1,0 +1,10 @@
+
+Appends the specified string to this character sequence!
+The characters of the String argument are appended, in order, increasing the length of this sequence by the length of the argument. If str is null, then the four characters "null" are appended.
+
+Let n be the length of this character sequence just prior to execution of the append method. Then the character at index k in the new character sequence is equal to the character at index k in the old character sequence, if k is less than n; otherwise, it is equal to the character at index k-n in the argument str.
+
+Parameters:
+str - a string.
+Returns:
+a reference to this object.
