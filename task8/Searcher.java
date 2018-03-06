@@ -6,7 +6,7 @@ public class Searcher {
 //O(N)
         int length = a.length;
 
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i < length; i++) {
             if(a[i].compareTo(item) == 0) {
                 return i;
             }
