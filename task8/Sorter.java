@@ -26,7 +26,7 @@ public class Sorter {
 
         int length = a.length;
 
-        for (int j = 0; j < length - 1; j++) {
+        for (int j = 0; j < length; j++) {
 
             T item = a[j];
 
@@ -46,9 +46,9 @@ public class Sorter {
 
         int length = a.length;
 
-        for (int i = 0; i < length - 2; i++) {
+        for (int i = 0; i < length - 1; i++) {
             int min = i;
-            for (int j = i + 1; j < length - 1; j++) {
+            for (int j = i + 1; j < length; j++) {
                 if (a[j].compareTo(a[min]) < 0) {
                     min = j;
                 }
