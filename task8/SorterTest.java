@@ -6,7 +6,7 @@ public class SorterTest {
 
     public static void main(String[] args) {
 
-        Integer[] a = {1, 2, 5, 9, 7, 15, 3};
+        Integer[] a = {1, 8, 5, 9, 10, 15, 11};
 
 
 

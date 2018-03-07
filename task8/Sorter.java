@@ -49,7 +49,7 @@ public class Sorter {
         for (int i = 0; i < length - 2; i++) {
             int min = i;
             for (int j = i + 1; j < length - 1; j++) {
-                if (a[i].compareTo(a[min]) > 0) {
+                if (a[j].compareTo(a[min]) < 0) {
                     min = j;
                 }
             }
